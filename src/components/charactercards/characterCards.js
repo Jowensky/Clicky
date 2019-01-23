@@ -1,11 +1,11 @@
 import React from "react";
 
-function charactercards(props) {
-  return (
+const CharacterCards = props => {
+  return ( 
     <div onclick={props.check}>
-      <img data-id={props.image} src={props.image} />
+      <img data-id={props.id} src={props.image} />
     </div>
   );
 }
 
-export default charactercards;
+export default CharacterCards;

@@ -1,30 +1,45 @@
 import React, { Component } from "react";
-import charactercards from "./components/characterCards";
-import instructions from "./components/instructions";
-import tally from "./components/tally";
-import recipe from "./recipe.json";
+import CharacterCards from "./components/characterCards";
+import Instructions from "./components/instructions";
+import Tally from "./components/tally";
+import recipes from "./recipes.json";
 
-class App extends Component {
+class Game extends Component {
+  // Setting the initial state of the Game component
+  state = {
+    recipes,
+    count: 0,
+    clicked: [],
+    status: "Don't Waste My Money"
+  };
+
+  // Checks if image have been clicked
+  check = event => {
+
+    this.setState({ status: "Good Luck!" });
+  
+    const cart = event.target.id
+
+    console.log(cart)
+  };
+
+
+  // The render method returns the JSX that should be rendered
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Instructions />
+        <Tally score={this.state.score} status={this.state.status} />
+        {this.state.recipes.map(recipe =>( 
+        <CharacterCards
+            id={recipe.id}
+            image={recipe.img}
+            check={this.check}
+        />
+        ))}
       </div>
     );
   }
 }
 
-export default App;
+export default Game;
