@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import charactercards from "./components/characterCards";
+import instructions from "./components/instructions";
+import tally from "./components/tally";
+import recipe from "./recipe.json";
 
 class App extends Component {
   render() {

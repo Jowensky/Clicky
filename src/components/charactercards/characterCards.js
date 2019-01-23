@@ -1,6 +1,6 @@
 import React from "react";
 
-function characterCard(props) {
+function charactercards(props) {
   return (
     <div onclick={props.check}>
       <img data-id={props.image} src={props.image} />
@@ -8,4 +8,4 @@ function characterCard(props) {
   );
 }
 
-export default characterCard;
+export default charactercards;
