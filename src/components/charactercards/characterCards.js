@@ -1,9 +1,16 @@
 import React from "react";
 
+const styles = {
+ size: {
+   height: "70px",
+   width: "98px"
+ }
+};
+
 const CharacterCards = props => {
   return ( 
-    <div onclick={props.check}>
-      <img data-id={props.id} src={props.image} />
+    <div onClick={props.check}>
+      <img style={styles.size} data-id={props.id} alt={props.name} src={props.image}  />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const instructions = () => {
+const Instructions = () => {
     return (
         <div>
             <p>It's been a weird day. Everytime a do something every thing change around me. May be I'm fatigued.. I'm gonna
