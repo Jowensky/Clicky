@@ -4,14 +4,13 @@ import React, { Component } from "react";
 class Tally extends Component {
   render() {
     return (
-      <div>
-          <p>{this.props.status}</p>
-        <div>
-        {this.props.score} | 12
-        </div>
-      </div>
+      <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+         <p className="navbar-brand">{this.props.status}</p>
+         <p>{this.props.score} | 12</p>
+      </nav>
+    </div>    
     );
   }
 }
-
 export default Tally;
