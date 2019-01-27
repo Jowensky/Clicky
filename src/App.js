@@ -11,14 +11,14 @@ class Game extends Component {
     count: 0,
     highscore: 0,
     clicked: [],
-    status: "Let's Get Cooking",
+    status: "Lets' Go",
   };
 
   // Checks if image have been clicked
   check = event => {
     event.preventDefault();
 
-    this.setState({ status: "Good Luck!" });
+    this.setState({ status: "Lets' Go" });
     const cart = event.target.alt;
     this.setState({ clicked: [...this.state.clicked, cart] });
     const repeated = this.state.clicked.indexOf(cart) > -1;
