@@ -9,7 +9,6 @@ class Game extends Component {
   state = {
     recipes,
     count: 0,
-    highscore: 0,
     clicked: [],
     status: "Lets' Go",
   };
@@ -34,10 +33,6 @@ class Game extends Component {
       recipes: recipes.sort(function() { return 0.5 - Math.random() })
     })
 
-    if (this.state.highscore <= this.state.count) {
-      this.setState({ highscore: this.state.count + 1 })
-    } 
-
    if (this.state.count === 12) {
       this.setState({ status: "Great Job You've Got Everything!" })
       this.reset();
@@ -57,7 +52,7 @@ class Game extends Component {
     return (
       <div>
         <Instructions />
-        <Tally score={this.state.count} status={this.state.status} highscore={this.state.highscore}/>
+        <Tally score={this.state.count} status={this.state.status}/>
         {this.state.recipes.map(recipe =>( 
         <CharacterCards
           id={recipe.id}

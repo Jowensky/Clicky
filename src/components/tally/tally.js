@@ -7,8 +7,7 @@ class Tally extends Component {
       <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
          <p className="navbar-brand">{this.props.status}</p>
-         <p>{this.props.score} | 12</p>&nbsp; &nbsp;
-         <p>Highscore: {this.props.highscore}</p>
+         <p>{this.props.score} | 12</p>
       </nav>
     </div>    
     );
