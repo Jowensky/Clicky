@@ -19,12 +19,9 @@ class Game extends Component {
     event.preventDefault();
     this.setState({ status: "Lets' Go" });
     this.setState({ clicked: [...this.state.clicked, event.target.alt] });
-    console.log(this.state.clicked)
 
     if (this.state.clicked.indexOf(event.target.alt) > -1) {
-      this.setState({
-        status: `One to many ${event.target.alt}`,
-      })
+      this.setState({ status: `One to many ${event.target.alt}` })
       this.reset();
     } else {
       this.play();
@@ -32,18 +29,19 @@ class Game extends Component {
   };
 
   play = () => {
+    this.setState({
+      count: this.state.count + 1,
+      recipes: recipes.sort(function() { return 0.5 - Math.random() })
+    })
+
+    if (this.state.highscore <= this.state.count) {
+      this.setState({ highscore: this.state.count + 1 })
+    } 
+
    if (this.state.count === 12) {
-      this.setState({
-        status: "Great Job You've Got Everything!",
-      })
+      this.setState({ status: "Great Job You've Got Everything!" })
       this.reset();
-    } else {
-      this.setState({
-        count: this.state.count + 1,
-        recipes: recipes.sort(function() { return 0.5 - Math.random() })
-      })
-      this.highscore();
-    }
+    } 
   };
 
   reset = () => {
@@ -52,14 +50,6 @@ class Game extends Component {
       count: 0,
       recipes: recipes.sort(function() { return 0.5 - Math.random() })
     })
-  };
-
-  highscore = () => {
-   if (this.state.highscore <= this.state.count) {
-      this.setState({
-        highscore: this.state.count + 1
-      })
-    } 
   };
 
   // The render method returns the JSX that should be rendered
