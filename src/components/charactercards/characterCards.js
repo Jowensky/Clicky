@@ -4,7 +4,6 @@ const styles = {
  imgsize: {
    height: "120px",
    width: "148px",
-  //  display: "inline-block",
    float: "left"
  },
  center: {

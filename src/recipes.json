@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "name": "black pepper",
-    "image": "../images/blackpepper.png"
+    "name": "Black Pepper",
+    "image": "../images/blackpepper.jpg"
   },
   {
     "id": 2,
-    "name": "chilli powder",
+    "name": "Chilli Powder",
     "image": "../images/chillipowder.jpeg"
   },
   {
     "id": 3,
-    "name": "garlic",
-    "image": "../images/garlic.png"
+    "name": "Garlic",
+    "image": "../images/garlic.jpg"
   },
   {
     "id": 4,
-    "name": "groundbeef",
+    "name": "Ground Beef",
     "image": "../images/groundbeef.jpg"
   },
   {
     "id": 5,
-    "name": "onion",
-    "image": "../images/Onion.png"
+    "name": "Onion",
+    "image": "../images/Onion.jpg"
   },
   {
     "id": 6,
-    "name": "oregano",
+    "name": "Oregano",
     "image": "../images/oregano.jpg"
   },
   {
     "id": 7,
-    "name": "parmesan",
+    "name": "Parmesan",
     "image": "../images/parmesan.jpg"
   },
   {
     "id": 8,
-    "name": "salt",
+    "name": "Salt",
     "image": "../images/salt.jpeg"
   },
   {
     "id": 9,
-    "name": "spaghetti",
+    "name": "Spaghetti",
     "image": "../images/spaghetti.JPG"
   },
   {
     "id": 10,
-    "name": "sugar",
+    "name": "Sugar",
     "image": "../images/sugar.jpg"
   },
   {
     "id": 11,
-    "name": "tomatojuice",
+    "name": "Tomato Juice",
     "image": "../images/tomatojuice.jpg"
   },
   {
     "id": 12,
-    "name": "tomatosauce",
+    "name": "Tomato Sauce",
     "image": "../images/tomatosauce.jpg"
   }
 ]

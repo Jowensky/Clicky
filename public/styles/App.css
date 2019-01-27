@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+body[background] {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

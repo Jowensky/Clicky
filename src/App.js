@@ -9,8 +9,9 @@ class Game extends Component {
   state = {
     recipes,
     count: 0,
+    highscore: 0,
     clicked: [],
-    status: "Don't Waste My Money",
+    status: "Let's Get Cooking",
   };
 
   // Checks if image have been clicked
@@ -24,6 +25,7 @@ class Game extends Component {
 
     if (repeated) {
       this.setState({
+        status: `One to many ${cart}`,
         clicked: [],
         count: 0,
         recipes: recipes.sort(function() { return 0.5 - Math.random() })
@@ -41,7 +43,7 @@ class Game extends Component {
     return (
       <div>
         <Instructions />
-        <Tally score={this.state.count} status={this.state.status} />
+        <Tally score={this.state.count} status={this.state.status}/>
         {this.state.recipes.map(recipe =>( 
         <CharacterCards
           id={recipe.id}
@@ -54,7 +56,6 @@ class Game extends Component {
       </div>
     );
   }
-
 };
 
 export default Game;
